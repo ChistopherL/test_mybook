@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/iconfont.woff2') format('woff2'),
+      url('../fonts/iconfont.woff') format('woff'),
+      url('../fonts/iconfont.ttf') format('truetype'),
+      url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+td,th {
+	border: 1px solid #c350ff57;
+}
+.header {
+	text-align: center;
+	font-size: 35px;
+	padding: 30px;
+	color: #fff;
+}
+.header a {
+	width: 120px;
+	height: 27px;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	font-size: 16px;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	line-height: 27px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.header a:hover {
+	background-color: red;
+	border: 1px solid red;
+}
+.book_table tbody a {
+	color: #fff;
+	padding: 8px 25px;
+	text-decoration: none;
+	border: 1px solid #fff;
+	border-radius: 20px;
+}
+.book_table a:hover {
+	background-color: red;
+	border: 1px solid red;
+}
+.book_table table {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.3);
+	border-collapse: collapse;
+	font-size: 18px;
+	font-family: '楷体';
+}
+.book_table table tr {
+	line-height: 60px;
+}
+.book_table table thead {
+	background-color: #2af598;
+}
+.book_table table tbody {
+	background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+}
+/*添加图书*/
+.cover {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+	display: none;
+	opacity: 0.7;
+	z-index: 998;
+}
+.addBookForm {
+	width: 420px;
+	height: 450px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%);;
+	display: none;
+	text-align: center;
+	z-index: 999;
+}
+.addBookForm h3 {
+	font-size: 22px;
+	padding: 40px;
+	color: #fff;
+}
+.addBookForm form {
+	width: 100%;
+	height: 350px;
+	position: absolute;
+	top: 58%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0px 80px;
+	box-sizing: border-box;
+}
+.addBookForm form p {
+	font-size: 18px;
+	color: #fff;
+}
+.addBookForm form input {
+	width: 70%;
+	height: 37px;
+	margin-top: 20px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+.addBookForm form input[type=text] {
+	padding-left: 10px;
+}
+.addBookForm form input[type=button] {
+	width: 90%;
+	margin-top: 40px;
+	font-size: 16px;
+	border-radius: 20px;
+	background-image: linear-gradient(to top, #e7f0fd 0%, #fff 100%);
+}
+.addBookForm form input[type=button]:hover {
+	color: #fff;
+	background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+}
+.exit {
+	position: absolute;
+	right: 3px;
+	top: 0px;
+	color: #fff;
+	cursor: pointer;
+	padding: 6px;
+}
+#addBookSubmit {
+	cursor: pointer;
+}

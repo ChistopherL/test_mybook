@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>图书管理系统</title>
+	<link rel="stylesheet" href="/www/css/style.css">
+	<link rel="shortcut icon" href="/www/images/favicon.ico" type="image/x-icon"/>
+	<script src="/www/js/jquery-3.2.1.min.js"></script>
+	<script src="/www/js/template-web.js"></script>
+	<script src="/www/js/index.js"></script>
+	<script type="text/template" id="indexTpl">
+		{{each list}}
+			<tr>
+				<td>{{$value.id}}</td>
+                <td>{{$value.name}}</td>
+                <td>{{$value.author}}</td>
+                <td>{{$value.category}}</td>
+                <td>{{$value.description}}</td>
+                <td><a href="javascript:;" class="editBook" id={{$value.id}}>修改</a>&nbsp;<a href="javascript:;"class="delBook" id={{$value.id}}>删除</a></td>
+			</tr>
+		{{/each}}
+	</script>
+</head>
+<body>
+	<div class="header">图书管理系统——基于MySQL<a href="javascript:;" id="toAddBook">添加图书</a></div>
+	<div class="book_table">
+		<table cellpadding="0" cellspacing="0">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>名称</th>
+                    <th>作者</th>
+                    <th>分类</th>
+                    <th>描述</th>
+                    <th>操作</th>
+				</tr>
+			</thead>
+			<tbody id="dataList">
+				<!-- indexTpl的数据渲染到这里 -->
+			</tbody>
+		</table>
+	</div>
+	<div class="cover"></div>
+	<div class="addBookForm">
+		<span class="iconfont exit">&#xe61b;</span>
+		<h3>添加图书信息</h3>
+		<form>
+			<p>名称：<input type="text" name="name"></p>
+        	<p>作者：<input type="text" name="author"></p>
+        	<p>分类：<input type="text" name="category"></p>
+        	<p>描述：<input type="text" name="description"></p>
+        	<input type="button" value="提交" id="addBookSubmit">
+		</form>
+	</div>
+</body>
+</html>
